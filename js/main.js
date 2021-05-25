@@ -41,6 +41,18 @@ setTimeout(function(){
             $(".mainRight").addClass("animate__animated animate__backInRight")
             $(".nav-link").removeClass("active")
             $("#inicioLinkNav").addClass("active")
+            setTimeout(function() {
+
+                $("#iconoInicioImg").show()
+                $(".tituloIntro1").show()
+                $(".tituloIntro2").show()
+                $("#botonesInicio").show()
+
+                $("#iconoInicioImg").addClass("animate__animated animate__backInDown")
+                $(".tituloIntro1").addClass("animate__animated animate__backInLeft")
+                $(".tituloIntro2").addClass("animate__animated animate__backInLeft")
+                $("#botonesInicio").addClass("animate__animated animate__backInUp")
+            }, 1000);
         }
     })
 }, 250);
