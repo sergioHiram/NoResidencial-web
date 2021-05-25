@@ -9,13 +9,29 @@ html {
     height: 100%;
     margin: 0;
     padding: 0;
-    padding-top: 3.7rem;
+    padding-top: 5.5rem;
     overflow-x: hidden;
     background-color: #fbf6f3;
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5{
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+
+  p{
+    font-family: 'Roboto', sans-serif; 
+  }
+
   a{
       text-decoration: none!important;
+      color: #000;
+  }
+  a:hover{
+    color: #f29699;
   }
 
   hr{
@@ -24,10 +40,23 @@ html {
 
   .footer{
       background-color: #FFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .text-footer{
+      font-size: .8em;
+  }
+
+  .social{
+      margin: 0 5px;
+      color: #364f6b;
   }
 
   .navbar{
       background-color: #FFF;
+      color: #364f6b!important;
   }
 
   .fondo{
@@ -38,7 +67,19 @@ html {
       background-repeat: no-repeat;
   }
 
-  
+  .fondo1{
+    background-image: url("../img/fondo-cuadri-inicio.png");
+    margin: 0;
+    padding: 0;
+}
+
+.fondointro{
+    background-image: url("../img/fondo-intro.png");
+    margin: 0;
+    padding: 0;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}
 
   .tituloIntro1{
     font-size: 1.3em;
@@ -55,12 +96,14 @@ html {
     text-decoration: underline !important;
     text-decoration-color: #f29699 !important;
     text-decoration-thickness: 3px !important;
+    color: #364f6b!important;
 }
 
 .nav-link:hover{
     text-decoration: underline !important;
     text-decoration-color: #f29699 !important;
     text-decoration-thickness: 3px !important;
+    color: #364f6b!important;
 }
 
 .dropdown-item:hover{
@@ -114,21 +157,49 @@ html {
     color: #FFF;
 }
 
-@media (min-width: 576px) { 
+.btnCustomInicio{
+    background-color:transparent;
+    color: #f29699;
+    border: 1px solid #f29699;
+}
 
-    .textoIntro{
-        font-size: 1em;
+.btnCustomInicio:hover{
+    background-color:#f29699;
+    color: #FFF;
+    border: 1px solid #f29699;
+}
+
+.modal-content{
+    background-color:transparent;
+    border:0!important;
+}
+
+.close{
+    color:#f29699;
+    font-size: 3rem;
+    text-shadow: 0 1px 0 transparent;
+    opacity: 1;
+}
+
+.modal-dialog{
+    margin-top: 0!important;
+}
+
+.modal-body{
+    padding: 0!important;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+    opacity: 1!important;
+
+@media (max-width: 550px) { 
+
+    .btnCustomInicio{
+        font-size: .8em;
     }
 
 }
-
-@media (min-width: 768px) { 
-
-    .textoIntro{
-        font-size: 1.2em;
-    }
-
- }
 
 
 

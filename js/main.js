@@ -7,10 +7,25 @@ $(document).ready(function(){
             $("#main").html(data)
             $(".mainLeft").addClass("animate__animated animate__backInLeft")
             $(".mainRight").addClass("animate__animated animate__backInRight")
+            setTimeout(function() {
+
+                $("#iconoInicioImg").show()
+                $(".tituloIntro1").show()
+                $(".tituloIntro2").show()
+                $("#botonesInicio").show()
+
+                $("#iconoInicioImg").addClass("animate__animated animate__backInDown")
+                $(".tituloIntro1").addClass("animate__animated animate__backInLeft")
+                $(".tituloIntro2").addClass("animate__animated animate__backInLeft")
+                $("#botonesInicio").addClass("animate__animated animate__backInUp")
+            }, 1000);
+            
             $("#inicioLinkNav").addClass("active")
         }
     })
 })
+
+
 
 $("#inicioLinkNav").click(function(){
     $(".mainLeft").addClass("animate__animated animate__backOutLeft")
@@ -31,6 +46,25 @@ setTimeout(function(){
 }, 250);
 })
 
+
+$("#inicioLinkDrop").click(function(){
+    $(".mainLeft").addClass("animate__animated animate__backOutLeft")
+    $(".mainRight").addClass("animate__animated animate__backOutRight")
+
+setTimeout(function(){
+    $.ajax({
+        type: "GET",
+        url: "introduccion.html",
+        success: function(data){
+            $("#main").html(data)
+            $(".mainLeft").addClass("animate__animated animate__backInLeft")
+            $(".mainRight").addClass("animate__animated animate__backInRight")
+            $(".nav-link").removeClass("active")
+            $("#navbarDropdownMenuLink").addClass("active")
+        }
+    })
+}, 250);
+})
 
 
 
